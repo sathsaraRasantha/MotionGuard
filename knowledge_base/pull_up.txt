@@ -1,0 +1,103 @@
+EXERCISE: Pull Up
+DESCRIPTION: A compound upper-body pulling movement involving elbow flexion and shoulder
+             adduction to raise the body from a dead hang to chin-over-bar position.
+PRIMARY JOINTS EVALUATED: elbow
+SOURCES:
+  - Youdas, J.W., Amundson, C.L., Cicero, K.S., Hahn, J.J., Hlynsky, D.A., & Laskowski, E.R. (2010). Surface electromyographic muscle activation patterns and elbow joint motion during a pull-up, chin-up, or perfect-pullup rotational exercise. Journal of Strength and Conditioning Research, 24(12), 3404–3414. https://doi.org/10.1519/JSC.0b013e3181f1598c
+  - Ronai, P., & Scibek, E. (2014). The Pull-Up. Strength & Conditioning Journal, 36(3), 88–90. https://doi.org/10.1519/SSC.0000000000000052
+  - Fees, M., Decker, T., Snyder-Mackler, L., & Axe, M.J. (1998). Upper extremity weight-training modifications for the injured athlete. The American Journal of Sports Medicine, 26(5), 732–742. https://doi.org/10.1177/036354659802600521
+
+================================================================================
+PHASE: dead_hang
+DESCRIPTION: Starting position. Arms fully extended overhead, body hanging freely.
+CORRECT FORM:
+  At the dead hang position, the elbow angle should be between 155° and 185°,
+  indicating full or near-full extension. According to Youdas et al. (2010),
+  initiating the pull-up from a full dead hang maximises the range of motion and
+  ensures complete activation of the latissimus dorsi through its full length.
+  Ronai & Scibek (2014) recommend that the athlete engage the scapular depressors
+  before initiating the pull to protect the shoulder girdle under load.
+ANGLE RANGES:
+  elbow_angle: 155°–185° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Incomplete elbow extension at dead hang
+ANGLE INDICATOR: elbow_angle < 155°
+SEVERITY: warning
+MECHANISM:
+  Failing to fully extend the elbows at the dead hang position reduces the effective
+  range of motion of the exercise and places sustained isometric load on the elbow
+  flexors. Youdas et al. (2010) demonstrated that EMG activation of the biceps
+  brachii and brachialis is significantly elevated when the elbow is maintained in
+  partial flexion at the start position, increasing fatigue and injury risk with
+  repeated sets. Fees et al. (1998) note that incomplete extension also increases
+  anterior shoulder stress by maintaining the humerus in a forward position.
+SOURCE: Youdas et al. (2010) JSCR 24(12):3404–3414; Fees et al. (1998) AJSM 26(5):732–742
+CORRECTION CUE:
+  Let the arms fully straighten at the bottom of every repetition before pulling
+  again. Allow a brief pause at the dead hang to confirm full extension.
+  Cue: "Dead hang — arms straight, shoulders relaxed, before every rep."
+
+--- ERROR 2 ---
+NAME: Elbow hyperextension at dead hang
+ANGLE INDICATOR: elbow_angle > 185°
+SEVERITY: danger
+MECHANISM:
+  Hyperextension of the elbow during a loaded dead hang places excessive stress
+  on the ulnar collateral ligament and the posterior elbow capsule. Fees et al.
+  (1998) caution that hypermobile athletes are particularly at risk of posterior
+  impingement and olecranon stress under the bodyweight load of a dead hang with
+  hyperextended elbows. This risk is compounded at higher bodyweights.
+SOURCE: Fees et al. (1998) AJSM 26(5):732–742
+CORRECTION CUE:
+  Maintain a very slight micro-bend in the elbows even at the bottom position.
+  Engage the lats slightly before hanging to protect the elbow joint.
+  Cue: "Arms long but not locked — keep the elbows soft."
+
+================================================================================
+PHASE: top_position
+DESCRIPTION: Maximum contraction position. Chin above the bar, elbows deeply flexed.
+CORRECT FORM:
+  At the top position, the elbow angle should fall between 40° and 75°, indicating
+  sufficient elbow flexion to bring the chin above the bar level. Youdas et al.
+  (2010) established that peak biceps brachii and latissimus dorsi activation occurs
+  in this range. Ronai & Scibek (2014) specify that the chin must clear the bar to
+  constitute a complete repetition, which corresponds to approximately 40°–60° of
+  elbow flexion depending on arm length.
+ANGLE RANGES:
+  elbow_angle: 40°–75° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Incomplete pull — elbow insufficiently flexed at top
+ANGLE INDICATOR: elbow_angle > 75°
+SEVERITY: warning
+MECHANISM:
+  Failure to achieve sufficient elbow flexion at the top means the chin does not
+  clear the bar, constituting an incomplete repetition. Beyond the technical
+  standard, Youdas et al. (2010) showed that peak lat and bicep activation is
+  only reached in the upper range of elbow flexion. Stopping short of this range
+  consistently under-develops the target musculature and may reflect a strength
+  deficit that should be addressed with assisted variations.
+SOURCE: Youdas et al. (2010) JSCR 24(12):3404–3414; Ronai & Scibek (2014) SCJ 36(3):88–90
+CORRECTION CUE:
+  Drive the elbows down and back rather than thinking about pulling the bar down.
+  Focus on bringing the chest to the bar, not just the chin.
+  Cue: "Elbows to your back pockets — chest to the bar."
+
+--- ERROR 2 ---
+NAME: Elbow over-flexion at top position
+ANGLE INDICATOR: elbow_angle < 40°
+SEVERITY: warning
+MECHANISM:
+  Extreme elbow flexion beyond the natural top position typically indicates a
+  kipping or momentum-driven movement rather than strict pull-up technique.
+  Fees et al. (1998) note that rapid elbow flexion under load combined with
+  shoulder instability increases anterior shoulder impingement risk. Ronai &
+  Scibek (2014) recommend controlled tempo throughout to eliminate momentum.
+SOURCE: Fees et al. (1998) AJSM 26(5):732–742; Ronai & Scibek (2014) SCJ 36(3):88–90
+CORRECTION CUE:
+  Use a controlled 2-second pull and 3-second lowering tempo. Avoid kipping
+  or using leg drive to assist the movement.
+  Cue: "Pull with your back, not your momentum — control every inch."

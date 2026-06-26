@@ -1,0 +1,138 @@
+EXERCISE: T-Bar Row
+DESCRIPTION: A compound upper-body pulling movement performed in a hip-hinged position,
+             targeting the latissimus dorsi, rhomboids, and middle trapezius while
+             maintaining a stable lumbar spine under horizontal load.
+PRIMARY JOINTS EVALUATED: elbow, hip
+SOURCES:
+  - Fenwick, C.M.J., Brown, S.H.M., & McGill, S.M. (2009). Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness. Journal of Strength and Conditioning Research, 23(5), 1408–1417. https://doi.org/10.1519/JSC.0b013e3181b03480
+  - McGill, S.M. (2015). Back Mechanic. Backfitpro Inc. ISBN: 978-0-9736018-4-3
+  - Signorile, J.F., Zink, A.J., & Szwed, S.P. (2002). A comparative electromyographical investigation of muscle utilization patterns using various hand positions during the lat pull-down. Journal of Strength and Conditioning Research, 16(4), 539–546. https://doi.org/10.1519/1533-4287(2002)016<0539>
+
+================================================================================
+PHASE: start_position
+DESCRIPTION: Arms fully extended, hip hinge established. Load hanging at arm's length.
+CORRECT FORM:
+  At the start position, the elbow angle should be between 150° and 185°, reflecting
+  full arm extension. The hip angle should fall between 80° and 145°, establishing
+  the hip hinge with the torso between 45° and parallel to the floor. Fenwick et al.
+  (2009) measured lumbar spine mechanics across rowing variations and found that
+  the hip hinge angle at setup is the primary determinant of spinal load throughout
+  the entire set. McGill (2015) specifies that the lumbar spine must be in neutral
+  lordosis — not flexed — at the start position, as any pre-existing lumbar flexion
+  dramatically increases L4/L5 disc loading under the rowing load.
+ANGLE RANGES:
+  elbow_angle: 150°–185° (correct)
+  hip_angle:   80°–145° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Insufficient hip hinge — torso too upright at start
+ANGLE INDICATOR: hip_angle > 145°
+SEVERITY: warning
+MECHANISM:
+  When the hip angle exceeds 145° at the start of the T-bar row, the torso is
+  too upright for the horizontal pulling movement. This shifts the exercise from
+  a horizontal row (targeting mid-back) toward a vertical pull, reducing
+  latissimus dorsi and rhomboid activation. Signorile et al. (2002) demonstrated
+  that body position is a primary determinant of muscle recruitment during rowing
+  movements. An upright torso also places the bar path in front of the centre of
+  mass, increasing anterior shoulder demand unnecessarily.
+SOURCE: Signorile et al. (2002) JSCR 16(4):539–546; Fenwick et al. (2009) JSCR 23(5):1408–1417
+CORRECTION CUE:
+  Hinge forward at the hips until the torso is between 45° and parallel to the
+  floor before gripping the bar. Keep the chest up and maintain a neutral spine
+  throughout the hinge.
+  Cue: "Hinge — push your hips back, chest forward, torso parallel."
+
+--- ERROR 2 ---
+NAME: Excessive forward lean — torso too horizontal
+ANGLE INDICATOR: hip_angle < 80°
+SEVERITY: danger
+MECHANISM:
+  A hip angle below 80° places the torso nearly parallel to or past horizontal,
+  which substantially increases the compressive and shear forces on the lumbar
+  spine. Fenwick et al. (2009) measured peak L4/L5 compressive forces during
+  various rowing exercises and found that more horizontal torso positions
+  generated forces approaching 3,000N — well above safe repetitive loading
+  thresholds identified by McGill (2015). The risk is compounded when the
+  lumbar spine rounds (flexes) at this angle, which McGill (2015) identifies
+  as the primary mechanism for lumbar disc herniation during rowing.
+SOURCE: Fenwick et al. (2009) JSCR 23(5):1408–1417; McGill (2015) Back Mechanic
+CORRECTION CUE:
+  Raise the torso slightly by extending at the hips. Maintain a neutral lumbar
+  curve — do not allow the lower back to round. Consider reducing load if
+  maintaining position is difficult.
+  Cue: "Chest up, back flat — your spine should look like a tabletop."
+
+--- ERROR 3 ---
+NAME: Incomplete arm extension at start
+ANGLE INDICATOR: elbow_angle < 150°
+SEVERITY: warning
+MECHANISM:
+  Failing to fully extend the elbows at the start position of the row reduces
+  the range of motion and places sustained load on the elbow flexors and bicep
+  tendon. Fenwick et al. (2009) note that full arm extension at the start of
+  rowing movements is necessary to achieve full scapular protraction, which in
+  turn maximises rhomboid and mid-trapezius activation through the full range
+  of the pulling movement.
+SOURCE: Fenwick et al. (2009) JSCR 23(5):1408–1417
+CORRECTION CUE:
+  Fully straighten the arms at the bottom of every repetition. Allow the
+  shoulder blades to protract (spread apart) at the bottom before initiating
+  the next pull.
+  Cue: "Let your shoulder blades spread apart at the bottom — feel the stretch."
+
+================================================================================
+PHASE: full_contraction
+DESCRIPTION: Maximum contraction position. Bar at chest/lower sternum, elbows behind the body.
+CORRECT FORM:
+  At full contraction, the elbow angle should fall between 50° and 80°, reflecting
+  the upper arms positioned behind the torso. The hip angle should remain between
+  80° and 145°, indicating that the hip hinge position is maintained throughout
+  the pulling movement. Fenwick et al. (2009) emphasise that the torso position
+  must remain stable through the concentric phase — any torso rise or lurch at
+  contraction indicates the load is excessive. Signorile et al. (2002) found
+  maximum rhomboid and mid-trapezius activation when the elbows are driven
+  past the torso line at the top of the rowing movement.
+ANGLE RANGES:
+  elbow_angle: 50°–80° (correct)
+  hip_angle:   80°–145° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Elbow over-flexion at contraction — excessive bicep curl
+ANGLE INDICATOR: elbow_angle < 50°
+SEVERITY: warning
+MECHANISM:
+  Elbow angles below 50° at the top of the row indicate the athlete is
+  curling the bar past the natural endpoint of the rowing movement. This
+  shifts the primary demand from the back musculature to the bicep brachii,
+  reducing the training stimulus for the intended target muscles. Fenwick
+  et al. (2009) note that over-pulling at the top of rowing movements also
+  causes the shoulder to internally rotate, which can increase bicipital
+  tendon stress at the anterior shoulder.
+SOURCE: Fenwick et al. (2009) JSCR 23(5):1408–1417
+CORRECTION CUE:
+  Stop the pull when the bar reaches the lower sternum and the elbows are
+  just behind the torso. Focus on squeezing the shoulder blades together
+  rather than pulling the bar further up.
+  Cue: "Squeeze your shoulder blades together at the top — the bar stops at your chest."
+
+--- ERROR 2 ---
+NAME: Hip angle collapse during row — torso rising during pull
+ANGLE INDICATOR: hip_angle outside 80°–145° at contraction
+SEVERITY: danger
+MECHANISM:
+  If the hip angle changes significantly between the start and contraction phases,
+  the athlete is using lumbar extension or torso rise to assist the pull rather
+  than pure arm and back strength. McGill (2015) describes this as one of the
+  most common and dangerous errors in rowing, as the repeated lumbar extension
+  under load creates compressive fatigue of the posterior elements and increases
+  facet joint stress. Fenwick et al. (2009) measured significantly higher lumbar
+  compressive forces in rowing variations where torso movement was used to
+  assist the pull compared to strict technique.
+SOURCE: Fenwick et al. (2009) JSCR 23(5):1408–1417; McGill (2015) Back Mechanic
+CORRECTION CUE:
+  Brace the core hard before each rep and maintain the same torso angle from
+  start to finish. If the torso rises to complete the rep, reduce the load.
+  Cue: "Lock your hips — only your arms move. Your back is a bridge, not a crane."

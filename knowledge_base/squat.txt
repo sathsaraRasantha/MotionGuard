@@ -1,0 +1,123 @@
+EXERCISE: Squat
+DESCRIPTION: A compound lower-body movement involving simultaneous hip and knee flexion and extension.
+PRIMARY JOINTS EVALUATED: knee, hip
+SOURCES:
+  - Schoenfeld, B.J. (2010). Squatting kinematics and kinetics and their application to exercise performance. Journal of Strength and Conditioning Research, 24(12), 3497–3506. https://doi.org/10.1519/JSC.0b013e3181bac2d7
+  - Escamilla, R.F. (2001). Knee biomechanics of the dynamic squat exercise. Medicine & Science in Sports & Exercise, 33(1), 127–141. https://doi.org/10.1097/00005768-200101000-00020
+  - Myer, G.D., Kushner, A.M., Brent, J.L., Schoenfeld, B.J., Hugentobler, J., Lloyd, R.S., ... & McGill, S.M. (2014). The back squat: A proposed assessment of functional deficits and technical factors that limit performance. Strength & Conditioning Journal, 36(6), 4–27. https://doi.org/10.1519/SSC.0000000000000103
+  - McGill, S.M. (2015). Back Mechanic. Backfitpro Inc. ISBN: 978-0-9736018-4-3
+
+================================================================================
+PHASE: standing
+DESCRIPTION: Lockout position at the top of the squat. Both knees and hips fully extended.
+CORRECT FORM:
+  At the standing lockout position, the knee angle should be between 155° and 185°,
+  reflecting full extension without hyperextension. The hip angle should similarly
+  reach 155°–185°, indicating complete hip extension. The spine remains neutral with
+  the torso upright. According to Schoenfeld (2010), full hip extension at lockout
+  is essential for complete gluteal activation and safe load transfer through the
+  lumbar spine.
+ANGLE RANGES:
+  knee_angle: 155°–185° (correct)
+  hip_angle:  155°–185° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Knee hyperextension at lockout
+ANGLE INDICATOR: knee_angle > 185°
+SEVERITY: warning
+MECHANISM:
+  Hyperextension of the knee at lockout places excessive stress on the posterior
+  knee capsule, the posterior cruciate ligament (PCL), and the popliteal structures.
+  Escamilla (2001) notes that posterior shear forces at the knee increase significantly
+  when the joint moves beyond full extension, particularly under load.
+SOURCE: Escamilla (2001) Med. Sci. Sports Exerc. 33(1):127–141
+CORRECTION CUE:
+  Maintain a soft lock at the top — keep a very slight micro-bend in the knees
+  at lockout. Think "tall spine, strong legs" rather than snapping the knees back.
+  Cue: "Stand tall but do not snap the knees back."
+
+--- ERROR 2 ---
+NAME: Incomplete hip extension at lockout
+ANGLE INDICATOR: hip_angle < 155°
+SEVERITY: warning
+MECHANISM:
+  Failure to achieve full hip extension at the top of the squat indicates incomplete
+  gluteal contraction and places residual load on the lumbar erectors. McGill (2015)
+  describes this as a contributor to chronic low back fatigue during high-volume
+  squat training. Schoenfeld (2010) confirms that full hip extension is required
+  for optimal posterior chain activation.
+SOURCE: Schoenfeld (2010) JSCR 24(12):3497–3506; McGill (2015) Back Mechanic
+CORRECTION CUE:
+  Squeeze the glutes firmly at the top of every rep. Drive the hips forward and
+  through to full extension before descending again.
+  Cue: "Squeeze your glutes hard at the top — hips through."
+
+================================================================================
+PHASE: bottom_position
+DESCRIPTION: Maximum depth position of the squat. Highest demand on knee and hip mobility.
+CORRECT FORM:
+  At the bottom of the squat, the knee angle should fall between 55° and 100°,
+  reflecting a depth at or below parallel. The hip angle should remain between
+  55° and 105°, indicating controlled hip flexion without posterior pelvic tilt
+  (butt wink). Escamilla (2001) established that patellofemoral compressive forces
+  peak between 60° and 90° of knee flexion and are brief in a well-executed squat.
+  Myer et al. (2014) emphasise that the torso lean must remain controlled, with
+  the spine neutral throughout the descent.
+ANGLE RANGES:
+  knee_angle: 55°–100° (correct)
+  hip_angle:  55°–105° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Butt wink (posterior pelvic tilt / lumbar flexion)
+ANGLE INDICATOR: hip_angle < 55°
+SEVERITY: danger
+MECHANISM:
+  Butt wink refers to the rounding of the lower back caused by posterior pelvic
+  tilt at the bottom of the squat. When the hip angle drops below 55°, the pelvis
+  rotates posteriorly, causing lumbar flexion under compressive load. McGill (2015)
+  identifies this as one of the primary mechanisms for lumbar disc injury during
+  squatting, as the combination of flexion and axial load significantly increases
+  intradiscal pressure at L4/L5 and L5/S1. Schoenfeld (2010) notes that limited
+  hip flexor flexibility and ankle dorsiflexion are common underlying causes.
+SOURCE: McGill (2015) Back Mechanic; Schoenfeld (2010) JSCR 24(12):3497–3506
+CORRECTION CUE:
+  Work on hip flexor and ankle dorsiflexion mobility before squatting to depth.
+  Use a slightly wider stance with toes turned out to accommodate hip anatomy.
+  Elevate heels slightly if ankle mobility is limited.
+  Cue: "Sit tall into the hole — chest up, maintain your arch."
+
+--- ERROR 2 ---
+NAME: Excessive knee flexion depth
+ANGLE INDICATOR: knee_angle < 55°
+SEVERITY: warning
+MECHANISM:
+  Knee angles below 55° during the squat place extreme compressive loads on the
+  patellofemoral joint and menisci. Escamilla (2001) demonstrated that both
+  patellofemoral compressive force and tibiofemoral compressive force increase
+  substantially at deep knee flexion angles, especially under external load.
+  Steinkamp et al. (1993) similarly found peak patellofemoral stress at deep
+  flexion angles during open and closed chain movements.
+SOURCE: Escamilla (2001) Med. Sci. Sports Exerc. 33(1):127–141
+CORRECTION CUE:
+  Limit squat depth to the point where neutral spine can be maintained.
+  For most athletes, parallel (knee angle ~90°) is sufficient for strength
+  development without excessive joint stress.
+  Cue: "Squat to parallel — depth means nothing if your back rounds."
+
+--- ERROR 3 ---
+NAME: Forward lean / torso collapse
+ANGLE INDICATOR: hip_angle < 55° combined with upright torso loss
+SEVERITY: warning
+MECHANISM:
+  Excessive forward lean at the bottom shifts load from the posterior chain
+  to the lumbar spine. Myer et al. (2014) identify forward lean as a technical
+  deficit that increases spinal extensor demand and reduces mechanical efficiency.
+  McGill (2015) notes that sustained lumbar flexion under compressive load is
+  the primary disc injury mechanism in squatting.
+SOURCE: Myer et al. (2014) SCJ 36(6):4–27; McGill (2015) Back Mechanic
+CORRECTION CUE:
+  Drive your elbows down and back to keep the bar path vertical.
+  Keep your chest up throughout the descent.
+  Cue: "Lead with your chest, not your hips."

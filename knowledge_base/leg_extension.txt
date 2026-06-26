@@ -1,0 +1,104 @@
+EXERCISE: Leg Extension
+DESCRIPTION: An open kinetic chain (OKC) isolation exercise performed on a machine,
+             involving knee extension from a flexed starting position to near-full
+             extension against resistance applied at the ankle.
+PRIMARY JOINTS EVALUATED: knee
+SOURCES:
+  - Witvrouw, E., Danneels, L., Van Tiggelen, D., Willems, T.M., & Cambier, D. (2004). Open versus closed kinetic chain exercises in patellofemoral pain: a 5-year prospective randomized study. The American Journal of Sports Medicine, 32(5), 1122–1130. https://doi.org/10.1177/0363546503262177
+  - Escamilla, R.F., Fleisig, G.S., Zheng, N., Barrentine, S.W., Wilk, K.E., & Andrews, J.R. (1998). Biomechanics of the knee during closed kinetic chain and open kinetic chain exercises. Medicine & Science in Sports & Exercise, 30(4), 556–569. https://doi.org/10.1097/00005768-199804000-00014
+  - Steinkamp, L.A., Dillingham, M.F., Markel, M.D., Hill, J.A., & Kaufman, K.R. (1993). Biomechanical considerations in patellofemoral joint rehabilitation. The American Journal of Sports Medicine, 21(3), 438–444. https://doi.org/10.1177/036354659302100317
+
+================================================================================
+PHASE: start_bent
+DESCRIPTION: Starting position with the knee flexed, foot behind the pad.
+CORRECT FORM:
+  At the starting position, the knee angle should fall between 70° and 109°,
+  reflecting a comfortable starting flexion that allows controlled extension
+  through the full range. Steinkamp et al. (1993) established that patellofemoral
+  compressive forces are elevated at knee flexion angles between 60° and 90°,
+  but these forces are brief and acceptable in a slow, controlled movement.
+  Witvrouw et al. (2004) specify that a controlled start position is important
+  to avoid sudden loading of the patellar tendon at the beginning of the movement,
+  particularly in individuals with patellofemoral pain syndrome.
+ANGLE RANGES:
+  knee_angle: 70°–109° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Excessive knee flexion at start — knee over-bent
+ANGLE INDICATOR: knee_angle < 70°
+SEVERITY: warning
+MECHANISM:
+  Starting the leg extension with the knee flexed beyond 70° places the
+  patellofemoral joint under elevated compressive stress before the movement
+  even begins. Steinkamp et al. (1993) demonstrated that patellofemoral
+  compressive force is highest at deep flexion angles during open kinetic
+  chain movements, with forces peaking near 60° of knee flexion. Escamilla
+  et al. (1998) similarly found that tibiofemoral compressive forces are
+  significantly elevated in deep knee flexion during OKC exercises compared
+  to the mid-range, making a deeply flexed start particularly stressful for
+  the patellofemoral joint and patellar tendon.
+SOURCE: Steinkamp et al. (1993) AJSM 21(3):438–444; Escamilla et al. (1998) MSSE 30(4):556–569
+CORRECTION CUE:
+  Adjust the machine so that the starting knee angle is between 80° and 100°.
+  Most leg extension machines have a seat adjustment to control starting flexion.
+  Begin each repetition from this controlled position rather than a deep bend.
+  Cue: "Start with a 90° bend — not deeper. Adjust the seat if needed."
+
+================================================================================
+PHASE: extended
+DESCRIPTION: Extended position. Leg straightened against the resistance pad.
+CORRECT FORM:
+  At the extended position, the knee angle should fall between 110° and 175°,
+  reflecting near-full extension without hyperextension. Witvrouw et al. (2004)
+  note that the leg extension exercise is effective for quadriceps strengthening
+  when performed through a controlled range, provided the terminal range is not
+  forced into hyperextension. Escamilla et al. (1998) established that anterior
+  shear forces at the knee (anterior cruciate ligament stress) are highest during
+  OKC extension in the 10°–40° range from full extension, making the final degrees
+  of extension the most biomechanically sensitive portion of the movement.
+ANGLE RANGES:
+  knee_angle: 110°–175° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Knee hyperextension at full extension
+ANGLE INDICATOR: knee_angle > 175°
+SEVERITY: danger
+MECHANISM:
+  Forcing the knee into hyperextension at the end of the leg extension movement
+  places sudden stress on the posterior knee capsule, the posterior cruciate
+  ligament (PCL), and the popliteal structures. Escamilla et al. (1998) found
+  that posterior shear forces at the tibiofemoral joint increase significantly
+  when the knee moves beyond neutral extension under resistance. Witvrouw et al.
+  (2004) specifically caution against terminal hyperextension in the leg extension
+  machine, particularly in athletes with patellofemoral pain, as it creates an
+  abrupt deceleration load on the patellar tendon at the end range.
+  In rehabilitation contexts, Steinkamp et al. (1993) identified hyperextension
+  under load as a contraindicated position for patellofemoral rehabilitation.
+SOURCE: Escamilla et al. (1998) MSSE 30(4):556–569; Witvrouw et al. (2004) AJSM 32(5):1122–1130; Steinkamp et al. (1993) AJSM 21(3):438–444
+CORRECTION CUE:
+  Stop the extension just short of full lockout — maintain a very slight bend
+  in the knee at the top of the movement. Control the weight through the entire
+  range; do not allow the pad to snap the leg into extension.
+  Cue: "Extend fully but stop before locking out — keep the muscle under tension."
+
+--- ERROR 2 ---
+NAME: Incomplete extension — insufficient range of motion
+ANGLE INDICATOR: knee_angle < 110°
+SEVERITY: warning
+MECHANISM:
+  Failing to extend the knee to at least 110° from the starting position
+  represents an incomplete range of motion that under-stimulates the quadriceps
+  musculature. Witvrouw et al. (2004) demonstrated that quadriceps strengthening
+  benefits from the leg extension are most pronounced when the full available
+  range is used, as the vastus medialis oblique (VMO) — critical for patellar
+  tracking — is most active in the terminal extension range (final 30°).
+  Incomplete extension consistently under-activates the VMO, which can
+  contribute to patellar maltracking over time.
+SOURCE: Witvrouw et al. (2004) AJSM 32(5):1122–1130
+CORRECTION CUE:
+  Extend the leg to near-full range on every repetition to ensure complete
+  VMO activation. If completing the range is painful, reduce the load rather
+  than reducing the range of motion.
+  Cue: "Full extension every rep — squeeze the quad at the top."

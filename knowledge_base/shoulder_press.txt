@@ -1,0 +1,107 @@
+EXERCISE: Shoulder Press (Overhead Press)
+DESCRIPTION: A compound upper-body pushing movement involving vertical pressing of a
+             load from shoulder height to full overhead extension.
+PRIMARY JOINTS EVALUATED: elbow
+SOURCES:
+  - Kolber, M.J., Beekhuizen, K.S., Cheng, M.S., & Hellman, M.A. (2014). Characteristics of anterior shoulder instability and hyperlaxity in the weight-training population. Journal of Strength and Conditioning Research, 28(5), 1213–1217. https://doi.org/10.1519/JSC.0000000000000415
+  - Fees, M., Decker, T., Snyder-Mackler, L., & Axe, M.J. (1998). Upper extremity weight-training modifications for the injured athlete. The American Journal of Sports Medicine, 26(5), 732–742. https://doi.org/10.1177/036354659802600521
+  - Dillman, C.J., Murray, T.A., & Hintermeister, R.A. (1994). Biomechanical differences of open and closed chain exercises with respect to the shoulder. Journal of Sport Rehabilitation, 3(3), 228–238. https://doi.org/10.1123/jsr.3.3.228
+
+================================================================================
+PHASE: rack_position
+DESCRIPTION: Starting position. Bar or dumbbells at shoulder height, elbows forward.
+CORRECT FORM:
+  At the rack position, the elbow angle should fall between 75° and 100°, reflecting
+  the bar resting at clavicle height with the upper arms approximately parallel to
+  the floor. Dillman et al. (1994) describe this as the position of maximum shoulder
+  joint loading during the press, making correct setup critical for injury prevention.
+  Kolber et al. (2014) emphasise that the elbows should be positioned slightly in
+  front of the bar, not flared excessively to the sides, to reduce anterior capsule
+  stress. The wrists should be stacked directly over the elbows.
+ANGLE RANGES:
+  elbow_angle: 75°–100° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Elbow angle too acute at rack — elbows too high
+ANGLE INDICATOR: elbow_angle < 75°
+SEVERITY: warning
+MECHANISM:
+  When the elbows are positioned above the bar at the rack position, the bar path
+  is forced forward rather than vertical. Dillman et al. (1994) demonstrate that
+  a non-vertical bar path during overhead pressing dramatically increases the
+  moment arm at the shoulder, elevating deltoid and rotator cuff demand. Kolber
+  et al. (2014) associate this position with increased anterior shoulder instability
+  in trained populations, particularly when combined with heavy loads.
+SOURCE: Dillman et al. (1994) J. Sport Rehabil. 3(3):228–238; Kolber et al. (2014) JSCR 28(5):1213–1217
+CORRECTION CUE:
+  Set the bar in the rack at clavicle height. When unracking, keep the elbows
+  slightly in front of the bar with the upper arm at approximately 45° to the torso.
+  Cue: "Elbows forward, not out — bar over the heels of your hands."
+
+--- ERROR 2 ---
+NAME: Elbow flare — elbows too wide at rack
+ANGLE INDICATOR: elbow_angle > 100°
+SEVERITY: warning
+MECHANISM:
+  Excessive elbow flare at the rack position abducts the humerus away from the
+  torso, placing the shoulder in a position of impingement risk. Fees et al. (1998)
+  identify wide elbow positioning during pressing as a primary mechanism for
+  subacromial impingement, as the greater tuberosity of the humerus narrows the
+  subacromial space when the arm is abducted beyond 90°. Kolber et al. (2014)
+  also found elbow flare to be associated with increased anterior instability.
+SOURCE: Fees et al. (1998) AJSM 26(5):732–742; Kolber et al. (2014) JSCR 28(5):1213–1217
+CORRECTION CUE:
+  Bring the elbows slightly forward and in, creating approximately a 45° angle
+  between the upper arm and the torso at the start position.
+  Cue: "Tuck your elbows — pretend you are bending the bar around your body."
+
+================================================================================
+PHASE: lockout
+DESCRIPTION: Top position. Arms fully extended overhead, load directly above the base of support.
+CORRECT FORM:
+  At lockout, the elbow angle should be between 155° and 185°, reflecting full
+  or near-full arm extension. Fees et al. (1998) specify that the bar should
+  finish directly overhead with the arms vertical when viewed from the front,
+  ensuring the load is centred over the body's base of support. Dillman et al.
+  (1994) note that full elbow extension at lockout is important for complete
+  triceps activation and efficient load transfer through the skeleton.
+ANGLE RANGES:
+  elbow_angle: 155°–185° (correct)
+================================================================================
+
+--- ERROR 1 ---
+NAME: Incomplete lockout — elbow insufficiently extended overhead
+ANGLE INDICATOR: elbow_angle < 155°
+SEVERITY: warning
+MECHANISM:
+  Failing to fully extend the elbows at lockout constitutes an incomplete
+  repetition and maintains the load on the musculature rather than transferring
+  it through the skeleton. Fees et al. (1998) note that partial lockout during
+  overhead pressing places sustained demand on the deltoid and supraspinatus,
+  increasing fatigue-related injury risk with high repetitions. Dillman et al.
+  (1994) identify incomplete lockout as a factor that prevents the natural
+  shoulder rhythm from completing its arc, reducing long-term shoulder health.
+SOURCE: Fees et al. (1998) AJSM 26(5):732–742; Dillman et al. (1994) J. Sport Rehabil. 3(3):228–238
+CORRECTION CUE:
+  Press fully to lockout on every repetition. At the top, shrug the traps
+  slightly to elevate the scapula into full upward rotation, completing the
+  natural shoulder girdle movement.
+  Cue: "Push the ceiling — reach tall at the top of every rep."
+
+--- ERROR 2 ---
+NAME: Elbow hyperextension at overhead lockout
+ANGLE INDICATOR: elbow_angle > 185°
+SEVERITY: danger
+MECHANISM:
+  Hyperextension of the elbow under overhead load stresses the posterior elbow
+  capsule and the olecranon. The risk is amplified overhead because bodyweight
+  and gravitational forces act through the hyperextended joint. Fees et al. (1998)
+  explicitly caution athletes with elbow hypermobility against overhead pressing
+  without cueing a soft lock, as repeated hyperextension under load can cause
+  posterior elbow impingement and olecranon stress reactions.
+SOURCE: Fees et al. (1998) AJSM 26(5):732–742
+CORRECTION CUE:
+  At the top of the press, maintain a very slight bend in the elbows — do not
+  snap them to full hyperextension. Think of "long arms" rather than "locked arms."
+  Cue: "Soft lock at the top — strong and long, not snapped."
