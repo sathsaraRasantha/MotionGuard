@@ -35,8 +35,9 @@ web_application/frontend/node_modules/
 web_application/frontend/dist/
 web_application/frontend/.vite/
 
-# ── Scratch / output images at project root ────────────
+# ── Output / generated images ──────────────────────────
 output*.png
+experiment/*.png
 
 # ── Personal documents ─────────────────────────────────
 Research Proposal - Sathsara.pdf
