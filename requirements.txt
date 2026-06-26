@@ -1,0 +1,9 @@
+numpy
+pandas
+opencv-contrib-python
+mediapipe==0.10.13
+matplotlib
+seaborn
+scikit-learn
+xgboost
+tensorflow
