@@ -1,0 +1,51 @@
+# ── Python environment ─────────────────────────────────
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ── Jupyter ────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Environment / secrets ──────────────────────────────
+# .env.example is safe to commit — it contains no real keys
+.env
+
+# ── Datasets & CSV files ───────────────────────────────
+data/
+experiment/*.csv
+
+# ── Sample / test input videos ─────────────────────────
+sample inputs/
+
+# ── Backend runtime directories ────────────────────────
+# Uploaded videos accumulate here at runtime
+web_application/backend/uploads/
+
+# Extracted injury frames written per-session
+web_application/backend/static/frames/
+
+# ── ChromaDB vector store ──────────────────────────────
+# Rebuilt automatically from knowledge_base/ on first run
+chroma_db/
+
+# ── Frontend build artefacts ───────────────────────────
+web_application/frontend/node_modules/
+web_application/frontend/dist/
+web_application/frontend/.vite/
+
+# ── Scratch / output images at project root ────────────
+output*.png
+
+# ── Personal documents ─────────────────────────────────
+Research Proposal - Sathsara.pdf
+MotionGuard_Implementation_Report.md
+MotionGuard_Implementation_Report_Updated.md
+
+# ── OS & editor ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
